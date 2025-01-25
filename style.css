@@ -1,0 +1,137 @@
+/* Estilos globales */
+body {
+  font-family: "Poppins", sans-serif;
+  margin: 0;
+  background-color: #f9f9f9;
+  color: #333;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.main {
+  flex: 1;
+
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px; /* Más espacio entre paneles */
+  padding: 20px;
+  max-width: 1200px; /* Limitar ancho máximo para vistas grandes */
+  margin: 0 auto;    /* Centrar contenido en vistas grandes */
+  box-sizing: border-box; /* Evitar desbordes */
+}
+
+h1 {
+  font-size: 4rem;
+  text-align: center;
+  margin: 20px 0;
+  color: #002855;
+}
+
+footer {
+  text-align: center;
+  padding: 10px 20px;
+  background-color: #002855;
+  color: #fff;
+  font-size: 1rem;
+  position: sticky;
+  bottom: 0;
+}
+
+/* Tarjetas y contenido visual */
+.card {
+  background: #ffffff;
+  border: 1px solid #ddd;
+  border-radius: 12px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  width: calc(100% - 40px); /* Ajustar a 100% menos espacio de padding */
+  max-width: 400px;         /* Limitar ancho máximo */
+  margin: 15px auto;        /* Más margen vertical */
+  text-align: left;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+.card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.card-content {
+  padding: 30px; /* Más espacio interno */
+}
+
+.card-content h2 {
+  font-size: 1.8rem; /* Incrementar tamaño de título */
+  color: #002855;
+  margin-bottom: 15px;
+}
+
+.card-content p {
+  font-size: 1rem;
+  line-height: 1.8; /* Mejor separación entre líneas */
+  color: #555;
+}
+
+/* Colores y detalles visuales */
+.creative {
+  color: #f2545b;
+  font-weight: bold;
+}
+
+/* Responsividad */
+@media (max-width: 768px) {
+  h1 {
+    font-size: 3rem;
+    margin: 10px 0;
+  }
+
+  .main {
+    padding: 10px;
+    gap: 20px; /* Ajustar separación para pantallas medianas */
+  }
+
+  .card {
+    width: calc(50% - 20px); /* 2 columnas en tablets */
+  }
+
+  footer {
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 480px) {
+  h1 {
+    font-size: 2.5rem;
+  }
+
+  .card {
+    width: calc(100% - 20px); /* 1 columna en pantallas pequeñas */
+  }
+
+  .card-content {
+    padding: 20px; /* Reducir padding en pantallas pequeñas */
+  }
+
+  .card-content h2 {
+    font-size: 1.5rem;
+  }
+
+  .card-content p {
+    font-size: 0.9rem;
+    line-height: 1.6;
+  }
+}
+
+@media (min-width: 1024px) {
+  .card {
+    width: calc(33.33% - 30px); /* 3 columnas en escritorios grandes */
+  }
+}
